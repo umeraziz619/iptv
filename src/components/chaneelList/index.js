@@ -1,22 +1,26 @@
 import useSWR from 'swr';
 import {
-  StyleSheet,
   Text,
   View,
   FlatList,
-  ImageBackground,
+  TouchableOpacity,
   ActivityIndicator,
   Image,
 } from 'react-native';
 import React, { useEffect } from 'react';
 import styles from './style';
+import { useNavigation } from '@react-navigation/native';
 
-const ChaneeList = ({ chaneelCategory, userData, numColums }) => {
+const ChaneeList = ({ chaneelCategory, userData, numColumns }) => {
+  console.log('The Chaneel Category is :' + chaneelCategory);
   const { username, password, uri } = userData;
-  const fetcher = (...args) =>
-    fetch(...args).then((res) => res.json());
-
-  const { data: chaneel, error, isValidating } = useSWR(
+  const navigation = useNavigation();
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+  const {
+    data: chaneel,
+    error,
+    isValidating,
+  } = useSWR(
     `${uri}/api.php?op=channels&username=${username}&password=${password}&action=get_live_streams&category_id=${chaneelCategory}`,
     fetcher,
     { initialData: [], revalidateOnMount: true }
@@ -24,21 +28,32 @@ const ChaneeList = ({ chaneelCategory, userData, numColums }) => {
 
   useEffect(() => {}, [chaneel, isValidating, chaneelCategory]);
 
-  const chaneelrender = ({ item }) =>
-    item.stream_icon && (
-      <View style={styles.chaneelrenderContainer}>
+  const chaneelrender = ({ item, index }) => (
+    <TouchableOpacity
+      style={styles.chaneelrenderContainer}
+      onPress={() => {
+        handlePress(index);
+      }}
+    >
+      {item.stream_icon ? (
         <Image
           resizeMode="contain"
           source={{ uri: item.stream_icon }}
           style={styles.image}
         />
-      </View>
-    );
+      ) : (
+        <Text style={{ color: 'white', textAlign: 'center' }}>{item.name}</Text>
+      )}
+    </TouchableOpacity>
+  );
 
   const isLoading = isValidating && (!chaneel || chaneel.length === 0);
+  const handlePress = (index) => {
+    navigation.navigate('playchaneel', { chaneelCategory, index });
+  };
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       {isLoading ? (
         <ActivityIndicator
           size="large"
@@ -48,11 +63,10 @@ const ChaneeList = ({ chaneelCategory, userData, numColums }) => {
       ) : (
         <FlatList
           data={chaneel}
-          style={{ flexDirection: 'column' }}
           renderItem={chaneelrender}
           keyExtractor={(item) => item.stream_id.toString()}
-          key={numColums.toString()} // Change the key prop when numColumns changes
-          numColumns={numColums}
+          key={numColumns.toString()} // Change the key prop when numColumns changes
+          numColumns={numColumns}
         />
       )}
     </View>

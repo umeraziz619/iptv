@@ -13,6 +13,7 @@ import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import BottomBar from '../../components/bottombar';
+import COLORS from '../../theme/COLORS';
 const Iptvhome = ({
   animationDuration = 5000,
   height = 250,
@@ -45,9 +46,7 @@ const Iptvhome = ({
           const apiUrl = `${uri}/api.php?op=channels&username=${username}&password=${password}&action=get_live_categories`;
           const response = await axios.get(apiUrl);
           const list = response.data;
-          // Store the list data in AsyncStorage
           await AsyncStorage.setItem('chaneelList', JSON.stringify(list));
-          // console.log(list)
         } else {
           console.log('User data not found.');
         }
@@ -66,13 +65,13 @@ const Iptvhome = ({
             colors={['#35D29D', '#3A63D5']}>
         <TouchableOpacity style={styles.sectionLeftLinear} onPress={()=>navigation.navigate("livetv")}>
           
-            <Icon name="tv-outline" size={100} color="#ffffff" />
+            <Icon name="tv-outline" size={100} color={COLORS.pure_white} />
             <Text style={styles.sectionLeftText}>LIVE TV</Text>
             {!animate ? (
               <BottomBar handlePress={handlePress} />
             ) : (
               <View style={{position: 'absolute', bottom: 0}}>
-                <ActivityIndicator color="#ffffff" />
+                <ActivityIndicator color={COLORS.pure_white} />
                 <Text style={styles.updatingText}>Updating</Text>
               </View>
             )}
@@ -92,7 +91,7 @@ const Iptvhome = ({
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}
               style={styles.sectionTopboxes}>
-              <Icon name="play-circle-outline" size={70} color="#ffffff" />
+              <Icon name="play-circle-outline" size={70} color={COLORS.pure_white} />
               <Text style={styles.sectionRightTopText}>MOVIES</Text>
               <BottomBar />
             </LinearGradient>
@@ -101,7 +100,7 @@ const Iptvhome = ({
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}
               style={styles.sectionTopboxes}>
-              <Icon name="film-outline" size={70} color="#ffffff" />
+              <Icon name="film-outline" size={70} color={COLORS.pure_white} />
               <Text style={styles.sectionRightTopText}>Series</Text>
               <BottomBar />
             </LinearGradient>
@@ -111,7 +110,7 @@ const Iptvhome = ({
               <Icon
                 name="book-outline"
                 size={30}
-                color="#ffffff"
+                color={COLORS.pure_white}
                 style={styles.Icon}
               />
               <Text style={styles.sbButtonText}>LIVE WITH EPG</Text>
@@ -120,7 +119,7 @@ const Iptvhome = ({
               <Icon
                 name="radio-outline"
                 size={30}
-                color="#ffffff"
+                color={COLORS.pure_white}
                 style={styles.Icon}
               />
               <Text style={styles.sbButtonText}>MULTI SCREEN</Text>
@@ -129,7 +128,7 @@ const Iptvhome = ({
               <Icon
                 name="trending-up-outline"
                 size={30}
-                color="#ffffff"
+                color={COLORS.pure_white}
                 style={styles.Icon}
               />
               <Text style={styles.sbButtonText}>CATCH UP</Text>

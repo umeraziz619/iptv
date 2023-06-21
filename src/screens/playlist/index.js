@@ -10,6 +10,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import {useNavigation} from '@react-navigation/native';
 import styles from './style';
 import Icon from 'react-native-vector-icons/Ionicons';
+import COLORS from '../../theme/COLORS';
 const PlayList = () => {
   const navigation = useNavigation();
   const [selectedOption, setSelectedOption] = useState(null);
@@ -55,11 +56,11 @@ const PlayList = () => {
          </View>
          <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.User}>
-          <Icon name="person-add-outline" size={25} color="#ffffff" />
+          <Icon name="person-add-outline" size={25} color={COLORS.pure_white} />
             <Text style={styles.UserText}>Add User</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.User}>
-          <Icon name="people-outline" size={25} color="#ffffff" />
+          <Icon name="people-outline" size={25} color={COLORS.pure_white} />
             <Text style={styles.UserText}>List Users</Text>
           </TouchableOpacity>
          </View>

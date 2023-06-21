@@ -13,6 +13,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../../theme/COLORS';
 
 const LoginXtream = () => {
   const [name, setName] = useState('');
@@ -49,8 +50,7 @@ const LoginXtream = () => {
   useEffect(() => {
     getUserData();
   }, []);
-
-
+  
   const loginHandle = async () => {
     const apiUrl = `${url}/api.php?username=${userName}&password=${password}&action=login`;
     console.log(apiUrl);
@@ -97,21 +97,21 @@ const LoginXtream = () => {
           <View style={styles.box}>
             <TextInput
               placeholder="Any Name"
-              placeholderTextColor="#ffffff"
+              placeholderTextColor={COLORS.pure_white}
               style={styles.textInput}
               value={name}
               onChangeText={text => setName(text)}
             />
             <TextInput
               placeholder="Username"
-              placeholderTextColor="#ffffff"
+              placeholderTextColor={COLORS.pure_white}
               style={styles.textInput}
               onChangeText={text => setUserName(text)}
               value={userName}
             />
             <TextInput
               placeholder="Password"
-              placeholderTextColor="#ffffff"
+              placeholderTextColor={COLORS.pure_white}
               style={styles.textInput}
               secureTextEntry={true}
               onChangeText={text => setPassword(text)}
@@ -119,7 +119,7 @@ const LoginXtream = () => {
             />
             <TextInput
               placeholder="http://url_here.com:port"
-              placeholderTextColor="#ffffff"
+              placeholderTextColor={COLORS.pure_white}
               style={styles.textInput}
               onChangeText={text => setUrl(text)}
               value={url}

@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../theme/COLORS';
 
 const styles = StyleSheet.create({
   imagebackground: {
@@ -30,11 +31,11 @@ const styles = StyleSheet.create({
     fontSize:17,
     fontWeight:'400',
     borderRadius:10,
-    color:'#ffffff',
+    color:COLORS.pure_white,
     padding:9,
     },
     button:{
-        backgroundColor:'#ffffff',
+        backgroundColor:COLORS.pure_white,
         padding:15,
         borderRadius:50,
     },

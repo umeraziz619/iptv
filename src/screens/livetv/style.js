@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontSize: 15,
     padding: 3,
+    backgroundColor: 'transparent',
   },
   leftFlatListContainer: {
     flexDirection: 'row',

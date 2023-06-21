@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../theme/COLORS';
 const styles = StyleSheet.create({
   imagebackground: {
     flex: 1,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     height: 50,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.pure_white,
     margin: 5,
     width: 150,
     flexDirection: 'row',
@@ -63,11 +64,11 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '400',
     borderRadius: 10,
-    color: '#ffffff',
+    color: COLORS.pure_white,
     padding: 9,
   },
   addUserButton: {
-    backgroundColor:"#ffffff",
+    backgroundColor:COLORS.pure_white,
     padding:15,
     borderRadius:15,
     borderWidth:1,
