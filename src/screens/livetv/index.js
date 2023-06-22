@@ -18,7 +18,7 @@ const Livetv = () => {
   const navigation = useNavigation();
   const [column, setColumn] = useState(5);
   const [hide, setHide] = useState(false);
-  const [selectedCategory, setselectedCategory] = useState(7016);
+  const [selectedCategory, setselectedCategory] = useState(672);
   const [userData, setUserData] = useState(null); // Add the userData state
   const [chaneelList, setChaneelList] = useState([]);
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);

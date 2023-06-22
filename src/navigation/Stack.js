@@ -12,6 +12,7 @@ import LoginXtream from '../screens/loginxtrem';
 import Iptvhome from '../screens/iptvhome';
 import Livetv from '../screens/livetv';
 import Playchaneel from '../screens/playchaneel';
+import Player from '../screens/player';
 const Stack = () => {
   const Stack = createNativeStackNavigator();
   return (
@@ -66,6 +67,11 @@ const Stack = () => {
           name="playchaneel"
           options={{headerShown: false}}
           component={Playchaneel}
+        />
+        <Stack.Screen
+        name='player'
+        options={{headerShown:false}}
+        component={Player}
         />
       </Stack.Navigator>
     </NavigationContainer>

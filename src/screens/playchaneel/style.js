@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   },
   mainSection:{
     flexDirection:'row',
+    flex:1,
   },
   leftSection:{
     flex:1,
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   },
   touchablePlayer:{
     flex:1,
-    marginLeft:"10%",
+    // marginLeft:"10%",
   },
   video: {
     width: 250,
