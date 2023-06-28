@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../theme/COLORS';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#101721',
+    backgroundColor: COLORS.playChaneelScreenBackground,
   },
   headerContainer:{
 
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    color: 'white',
+    color: COLORS.white,
     fontSize: 15,
     fontWeight: 'bold',
     marginRight:20,
@@ -33,14 +34,18 @@ const styles = StyleSheet.create({
   },
   searchbox: {
     flexDirection: 'row',
-    backgroundColor: '#1A1A1A',
+    backgroundColor: COLORS.searchBackgroundColor,
     borderRadius: 8,
     justifyContent: 'space-around',
     marginBottom:14,
   },
+  separator:{
+    height: 1,
+    backgroundColor: 'gray',
+  },
   textInput: {
     width: '80%',
-    color: 'white',
+    color: COLORS.white,
     height: 40,
     fontWeight: '400',
     fontSize: 15,
@@ -51,29 +56,29 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent:'space-between',
     lineHeight: 1,
-    borderBottomColor: 'white',
+    borderBottomColor: COLORS.white,
     marginBottom: 10,
     borderBottomWidth: 0.2,
-    borderColor: 'white',
+    borderColor: COLORS.white,
     padding:7,
   },
   chaneelName: {
-    color: 'white',
+    color: COLORS.white,
     fontSize: 15,
     fontWeight:'500',
   },
   chaneelNumber: {
-    color: 'white',
+    color: COLORS.white,
     fontSize: 17,
   },
   rightSection: {
     flex: 2,
-    borderColor: 'white',
+    borderColor: COLORS.white,
     flexDirection: 'row',
     height: '100%',
   },
   rightSectionTopText: {
-    color: 'white',
+    color: COLORS.white,
     alignSelf: 'center',
   },
   chaneelrenderContainer: {
@@ -82,7 +87,7 @@ const styles = StyleSheet.create({
     margin:10,
   },
   selectedItem: {
-    backgroundColor: 'green',
+    backgroundColor: COLORS.indexSelectedBackground,
   }
 });
 
