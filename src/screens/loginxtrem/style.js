@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "backgroundColor: 'rgba(0, 0, 0, 0.7)",
+    backgroundColor: COLORS.loginscreenbackgroundshade,
     flexDirection: 'row',
   },
   sectionone: {

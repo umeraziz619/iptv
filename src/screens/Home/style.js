@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native'
+import COLORS from '../../theme/COLORS';
 const styles = StyleSheet.create({
     linearGradient: {
       flex: 1,
@@ -8,7 +9,7 @@ const styles = StyleSheet.create({
     container: {
       height: '75%',
       width: '90%',
-      backgroundColor: 'rgba(0, 0, 0, 0.3)',
+      backgroundColor: COLORS.playlistBackgroundColor,
       borderRadius: 20,
     },
     itemcontainer: {
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     },
     largeItem: {
       flexDirection: 'row',
-      backgroundColor: 'white',
+      backgroundColor: COLORS.white,
       height: '24%',
       width: '45%',
       marginBottom: '3%',
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     iptvText:{
         textAlign: 'center',
         width: '80%',
-        color: 'white',
+        color: COLORS.white,
         fontSize: 30,
         fontWeight: '700',
     }
