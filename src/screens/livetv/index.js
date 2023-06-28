@@ -47,7 +47,9 @@ const Livetv = () => {
     setSelectedItemIndex(index);
     console.log(item.category_id);
   };
-
+  const renderItemSeparator = () => {
+    return <View style={styles.separator} />;
+  };
   const handleHide = () => {
     setHide(!hide);
     console.log(hide);
@@ -58,12 +60,12 @@ const Livetv = () => {
       setColumn(5);
     }
   };
-  const handleSearch = (query)=>{
+  const handleSearch = query => {
     setSearchQuery(query);
-  }
-  const filteredChaneelList = chaneelList.filter((item)=>{
-    return item.category_name.toLowerCase().includes(searchQuery.toLowerCase())
-  })
+  };
+  const filteredChaneelList = chaneelList.filter(item => {
+    return item.category_name.toLowerCase().includes(searchQuery.toLowerCase());
+  });
 
   const renderItem = ({item, index}) => {
     const itemStyle = selectedItemIndex === index ? styles.selectedItem : {};
@@ -109,7 +111,12 @@ const Livetv = () => {
             hide ? {display: 'none'} : {display: 'flex'},
           ]}>
           <View style={styles.searchbox}>
-            <Icon name="search" size={30} color={COLORS.pure_white} style={styles.icon} />
+            <Icon
+              name="search"
+              size={30}
+              color={COLORS.pure_white}
+              style={styles.icon}
+            />
             <TextInput
               style={styles.textInput}
               onChangeText={handleSearch}
@@ -122,6 +129,7 @@ const Livetv = () => {
             data={filteredChaneelList}
             renderItem={renderItem}
             keyExtractor={item => item.category_id.toString()}
+            ItemSeparatorComponent={renderItemSeparator}
           />
         </View>
         <View style={styles.rightSection}>
