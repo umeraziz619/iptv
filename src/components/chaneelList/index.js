@@ -12,7 +12,6 @@ import styles from './style';
 import { useNavigation } from '@react-navigation/native';
 
 const ChaneeList = ({ chaneelCategory, userData, numColumns }) => {
-  console.log('The Chaneel Category is :' + chaneelCategory);
   const { username, password, uri } = userData;
   const navigation = useNavigation();
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -32,7 +31,8 @@ const ChaneeList = ({ chaneelCategory, userData, numColumns }) => {
     <TouchableOpacity
       style={styles.chaneelrenderContainer}
       onPress={() => {
-        handlePress(index);
+        let mystream_id = item.stream_id;
+        handlePress(index,mystream_id);
       }}
     >
       {item.stream_icon ? (
@@ -48,10 +48,9 @@ const ChaneeList = ({ chaneelCategory, userData, numColumns }) => {
   );
 
   const isLoading = isValidating && (!chaneel || chaneel.length === 0);
-  const handlePress = (index) => {
-    navigation.navigate('playchaneel', { chaneelCategory, index });
+  const handlePress = (index,mystream_id) => {
+    navigation.navigate('playchaneel', { chaneelCategory, index,mystream_id });
   };
-
   return (
     <View style={styles.container}>
       {isLoading ? (
