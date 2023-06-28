@@ -1,63 +1,93 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../theme/COLORS';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#101721',
+    backgroundColor: COLORS.playChaneelScreenBackground,
   },
-  header:{
-    height:30,
+  gifLoading: {
+    width: 50,
+    height: 50,
+    position: 'absolute',
+    top: 0,
   },
-  mainSection:{
-    flexDirection:'row',
-    flex:1,
+  header: {
+    height: 30,
   },
-  leftSection:{
-    flex:1,
+  mainSection: {
+    flexDirection: 'row',
+    flex: 1,
   },
-  flatListContainer:{
-    flexDirection:'row',
-    height:55,
-    alignItems:'center',
-    marginTop:10,
+  leftSection: {
+    flex: 1,
+    marginRight: 10,
+    marginLeft: 10,
+    backgroundColor: 'black',
+    borderRadius: 20,
   },
-  chaneelNameContainer:{
-    flexDirection:'row',
-    justifyContent:'space-between'
+  none: {
+    display: 'none',
   },
-  flatListNumbersTop:{
-    color:'white',
-    fontWeight:'500',
+  ActivityIndicator: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  flatListContainer: {
+    flexDirection: 'row',
+    height: 40,
+    alignItems: 'center',
+    marginTop: 7,
+  },
+  chaneelNameContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  flatListNumbersTop: {
+    color: 'white',
+    fontWeight: '500',
+    alignSelf: 'flex-end',
+    fontSize: 12,
   },
   selectedItem: {
-    backgroundColor: 'green',
+    backgroundColor: COLORS.indexSelectedBackground,
   },
-  flatListNumbersBottom:{
-    color:"white",
-    fontWeight:'500',
+  steam_iconimage: {
+    height: 40,
+    width: 40,
+    marginLeft: 10,
   },
-  cname:{
-    color:'white',
+  flatListNumbersBottom: {
+    fontSize: 12,
+    color: COLORS.white,
+    fontWeight: '500',
+    alignSelf: 'center',
   },
-  rightSection:{
-    flex:2,
+  cname: {
+    color: COLORS.white,
   },
-  touchablePlayer:{
-    flex:1,
-    // marginLeft:"10%",
+  rightSection: {
+    flex: 2,
+  },
+  touchablePlayer: {
+    flex: 1,
+  },
+  videoContainer: {
+    flex: 1,
   },
   video: {
     width: 250,
     height: 150,
+    backgroundColor: COLORS.black,
   },
-  chaneelName:{
-    color:'white',
-    fontSize:17,
-    fontWeight:500,
+  chaneelName: {
+    color: COLORS.white,
+    fontSize: 17,
+    fontWeight: 500,
   },
-  flatListChaneelNameContainer:{
-    marginLeft:10,
+  flatListChaneelNameContainer: {
+    marginLeft: 10,
   },
-  
 });
 
 export default styles;
