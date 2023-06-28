@@ -1,9 +1,8 @@
 import {StyleSheet} from 'react-native';
-import COLORS from '../../theme/COLORS';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.playChaneelScreenBackground,
+    backgroundColor: '#101721',
   },
   gifLoading: {
     width: 50,
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   selectedItem: {
-    backgroundColor: COLORS.indexSelectedBackground,
+    backgroundColor: '#109cb5',
   },
   steam_iconimage: {
     height: 40,
@@ -59,18 +58,19 @@ const styles = StyleSheet.create({
   },
   flatListNumbersBottom: {
     fontSize: 12,
-    color: COLORS.white,
+    color: 'white',
     fontWeight: '500',
     alignSelf: 'center',
   },
   cname: {
-    color: COLORS.white,
+    color: 'white',
   },
   rightSection: {
     flex: 2,
   },
   touchablePlayer: {
     flex: 1,
+    // marginLeft:"10%",
   },
   videoContainer: {
     flex: 1,
@@ -78,10 +78,10 @@ const styles = StyleSheet.create({
   video: {
     width: 250,
     height: 150,
-    backgroundColor: COLORS.black,
+    backgroundColor: 'black',
   },
   chaneelName: {
-    color: COLORS.white,
+    color: 'white',
     fontSize: 17,
     fontWeight: 500,
   },

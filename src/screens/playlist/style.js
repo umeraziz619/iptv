@@ -1,4 +1,6 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../theme/COLORS';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
   linearGradient: {
@@ -10,21 +12,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height: '75%',
     width: '90%',
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    backgroundColor: COLORS.playlistBackgroundColor,
     borderRadius: 20,
     justifyContent: 'center',
   },
   itemContainer: {
     height: '100%',
     width: '68%',
-    // backgroundColor:"white",
   },
   nameContainer: {
     marginTop: '3%',
     flexDirection: 'row',
   },
   nameText: {
-    color: 'white',
+    color: COLORS.white,
     fontSize: 23,
     fontWeight: '500',
     marginRight: '4%',
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
     width: '50%',
     height: 40,
     fontSize: 17,
-    backgroundColor: 'white',
+    backgroundColor: COLORS.white,
     borderRadius: 10,
     fontWeight: '600',
     padding: 10,
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   iptvText: {
     textAlign: 'center',
     width: '80%',
-    color: 'white',
+    color: COLORS.white,
     fontSize: 30,
     fontWeight: '500',
   },
@@ -51,7 +52,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   playListText: {
-    color: 'white',
+    color: COLORS.white,
     fontSize: 23,
     fontWeight: '500',
   },
@@ -70,8 +71,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   optionSelected: {
-    backgroundColor: '#2E71FB',
-    shadowColor: '#000000',
+    backgroundColor: COLORS.optionSelectedBackground,
+    shadowColor: COLORS.black,
     shadowOpacity: 0.8,
     shadowRadius: 2,
     shadowOffset: {
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     },
   },
   optionText: {
-    color: 'white',
+    color: COLORS.white,
     fontSize: 17,
     fontWeight: '500',
     marginLeft: 5,
@@ -98,16 +99,16 @@ const styles = StyleSheet.create({
     marginTop:6,
     fontSize:19,
     fontWeight:'500',
-    color:'white',
+    color:COLORS.white,
   },
   browseButton:{
-    backgroundColor:'#453051',
+    backgroundColor:COLORS.browsebuttonBackground,
     padding:12,
     marginLeft:"20%",
     borderRadius:10,
   },
   browseText:{
-    color:"white",
+    color:COLORS.white,
     fontSize:17,
     alignSelf:'center',
     fontWeight:'500',
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
     marginRight:30,
   },
   User:{
-    backgroundColor:'#091A2F',
+    backgroundColor:COLORS.userBackgroundColor,
     marginRight:4,
     width:"30%",
     justifyContent:'space-evenly',
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
   UserText:{
     fontSize:20,
     fontWeight:'500',
-    color:'white'
+    color:COLORS.white
   }
 });
 

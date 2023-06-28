@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import COLORS from '../../theme/COLORS';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const styles = StyleSheet.create({
   imagebackground: {
@@ -7,7 +8,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "backgroundColor: 'rgba(0, 0, 0, 0.7)",
+    backgroundColor: COLORS.loginscreenbackgroundshade,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     height: '60%',
     width: '92%',
-    backgroundColor: 'rgba(234, 245, 251, 0.2)',
+    backgroundColor: COLORS.boxBackgroundColor,
     justifyContent: 'space-evenly',
     alignItems: 'center',
   },
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     fontWeight:'600',
   },
   textInput: {
-    backgroundColor: 'rgba(234, 245, 251,0.1)',
+    backgroundColor: COLORS.inputBackgroundColor,
     width:"85%",
     fontSize:17,
     fontWeight:'400',

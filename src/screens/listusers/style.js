@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../theme/COLORS';
 
 const styles = StyleSheet.create({
   imagebackground: {
@@ -6,7 +7,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "backgroundColor: 'rgba(0, 0, 0, 0.7)",
+    backgroundColor: COLORS.loginscreenbackgroundshade,
     justifyContent: 'space-between',
     alignItems: 'center',
   },
@@ -35,12 +36,12 @@ footer:{
     justifyContent:'center',
   },
   textListUser:{
-    color:'white',
+    color:COLORS.white,
     fontSize:23,
     fontWeight:'600',
   },
   headerAddUserContainer:{
-    backgroundColor: 'rgba(234, 245, 251, 0.2)',
+    backgroundColor: COLORS.boxBackgroundColor,
     padding:8,
     flexDirection:'row',
     borderRadius:20,
@@ -48,12 +49,12 @@ footer:{
   },
   headerAddUserText:{
     marginLeft:10,
-    color:'white',
+    color:COLORS.white,
     fontSize:17,
     alignSelf:"center",
   },
   addnewUserText:{
-    color:'white',
+    color:COLORS.white,
     fontSize:25,
   },
   icon:{
@@ -62,19 +63,19 @@ footer:{
     paddingLeft:6,
     paddingTop:2,
     borderRadius:50,
-    backgroundColor: 'rgba(234, 245, 251, 0.2)',
+    backgroundColor: COLORS.boxBackgroundColor,
   },
   footertext:{
       letterSpacing:1,
     fontSize:13,
-    color:'white',
+    color:COLORS.white,
   },
   textunderline:{
     marginLeft:3,
     fontSize:13,
     letterSpacing:1,
     fontWeight:'700',
-    color:'white',
+    color:COLORS.white,
     textDecorationLine:'underline'
   }
 });
