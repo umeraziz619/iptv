@@ -1,13 +1,9 @@
-import { StyleSheet, Text,TouchableOpacity,StatusBar, View,ImageBackground } from 'react-native'
-import React,{useEffect} from 'react'
+import {Text,TouchableOpacity,StatusBar, View,ImageBackground } from 'react-native'
+import React from 'react'
 import styles from './style'
 import Icon from 'react-native-vector-icons/Ionicons'
-import Orientation from 'react-native-orientation-locker'
 import COLORS from '../../theme/COLORS'
 const Loaddevice = () => {
-  useEffect(() => {
-    Orientation.lockToLandscape(); // Unlock the screen when component unmounts
-}, []);
   return (
     <ImageBackground style={styles.imagebackground} source={require("../../../assests/images/background.png")}>
       <StatusBar backgroundColor="#1C1515" />
