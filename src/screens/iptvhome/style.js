@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../theme/COLORS';
 
 const styles = StyleSheet.create({
   container: {
@@ -29,20 +30,20 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   animationContainer: {
-    backgroundColor: 'rgba(6, 21, 18, 0.7)',
+    backgroundColor: COLORS.animationCOLOR,
     position: 'absolute',
     top: 0,
     right: 0,
   },
   sectionLeftText: {
-    color: '#ffffff',
+    color: COLORS.pure_white,
     fontSize: 30,
     fontWeight: '700',
   },
   updatingText:{
     fontSize:17,
     fontWeight:"500",
-    color:'white',
+    color:COLORS.white,
   },
   sectionRight: {
     width: '60%',
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   sectionRightTop: {
     flexDirection: 'row',
     height: '70%',
-    borderColor: 'white',
+    borderColor: COLORS.white,
     justifyContent: 'space-between',
   },
   sectionTopboxes: {
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   sectionRightTopText: {
-    color: '#ffffff',
+    color: COLORS.pure_white,
     fontWeight: '700',
     fontSize: 17,
   },
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   sectionRightBottomButton: {
-    backgroundColor: '#75AD8A',
+    backgroundColor: COLORS.smallboxesbackground,
     marginLeft: 5,
     borderRadius: 10,
     height: 60,
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   sbButtonText: {
-    color: 'white',
+    color: COLORS.white,
     fontWeight: '500',
     marginLeft: 6,
     fontSize: 14,
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   footerText: {
-    color: 'white',
+    color: COLORS.white,
   },
 });
 export default styles;

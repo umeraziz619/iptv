@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native'
+import COLORS from '../../theme/COLORS';
 
 const styles = StyleSheet.create({
     imagebackground:{
@@ -6,7 +7,7 @@ const styles = StyleSheet.create({
     },
     container:{
         flex:1,
-        backgroundColor:"backgroundColor: 'rgba(0, 0, 0, 0.7)",
+        backgroundColor:COLORS.loginscreenbackgroundshade,
         justifyContent:'center',
         alignItems:'center',    
     },
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
         borderRadius:25,
         height:"80%",
         width:"60%",
-        backgroundColor:"rgba(234, 245, 251, 0.2)",
+        backgroundColor:COLORS.boxBackgroundColor,
     },
     touchableOpacity:{
         padding:3,
@@ -25,13 +26,13 @@ const styles = StyleSheet.create({
         width:'85%',
         alignSelf:'center',
         flexDirection:'row',
-        backgroundColor:"backgroundColor: 'rgba(0, 0, 0, 0.7)",
+        backgroundColor:COLORS.loginscreenbackgroundshade,
         justifyContent:'center',
         alignItems:'center',
         borderRadius:25,
     },
     text:{
-        color:'white',
+        color:COLORS.white,
         fontSize:33                                                                     ,
         fontWeight:'500',
         marginLeft:"8%",
